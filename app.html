@@ -1,0 +1,23 @@
+<head>
+  <title>transforming-collection-documents</title>
+</head>
+
+<body>
+  <div class="container" style="margin-top: 20px;">
+    {{> productList}}
+  </div>
+</body>
+
+<template name="productList"> 
+  <ul>
+    {{#each products}}
+      {{> productItem}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="productItem">
+  <li>
+    {{name}} - {{description}} - {{formatPrice "dollars"}}
+  </li>
+</template>
